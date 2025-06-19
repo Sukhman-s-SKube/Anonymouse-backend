@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: anonymouse
+  namespace: anonymouse
+spec:
+  type: LoadBalancer
+  selector: { app: anonymouse }
+  ports: [ { port: 80, targetPort: 8000 } ]
